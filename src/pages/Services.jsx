@@ -2,12 +2,19 @@ import { useState } from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { facialServices, lashServices } from '../data/services';
 
-const categories = ['All', 'Pre-Treatment', 'Chemical Peel', 'Main Treatment', 'Lash'];
+const primaryCategories = ['Facial', 'Lash'];
+const facialCategories = ['All', 'Pre-Treatment', 'Chemical Peel', 'Main Treatment'];
 
 export default function Services() {
-  const [category, setCategory] = useState('All');
-  const services = [...facialServices, ...lashServices];
-  const filtered = category === 'All' ? services : services.filter((s) => s.category === category);
+  const [primaryCategory, setPrimaryCategory] = useState('Facial');
+  const [facialCategory, setFacialCategory] = useState('All');
+
+  const filtered =
+    primaryCategory === 'Lash'
+      ? lashServices
+      : facialCategory === 'All'
+        ? facialServices
+        : facialServices.filter((service) => service.category === facialCategory);
 
   const handleBook = (service) => {
     const bookingForm = document.getElementById('booking-intent');
@@ -23,25 +30,40 @@ export default function Services() {
         <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Our menu</p>
         <h1 className="font-display text-4xl text-deep">Facial & Lash Services</h1>
         <p className="text-deep/70 max-w-3xl">
-          Select a category to explore detailed offerings. Facials are organized into Pre-Treatment, Chemical Peel, and
-          Main Treatment options so you can quickly find the right experience, all customized to your skin, lash pattern,
-          and lifestyle.
+          Browse our services by the two main experiences we offer: facial treatments and lash artistry. Within facials,
+          explore Pre-Treatment, Chemical Peel, and Main Treatment options to find the perfect ritual for your skin goals.
         </p>
       </header>
 
       <div className="flex flex-wrap gap-3">
-        {categories.map((c) => (
+        {primaryCategories.map((c) => (
           <button
             key={c}
-            onClick={() => setCategory(c)}
+            onClick={() => setPrimaryCategory(c)}
             className={`px-4 py-2 rounded-full text-sm border transition ${
-              category === c ? 'bg-gold text-white border-gold' : 'bg-white border-blush text-deep'
+              primaryCategory === c ? 'bg-gold text-white border-gold' : 'bg-white border-blush text-deep'
             }`}
           >
             {c}
           </button>
         ))}
       </div>
+
+      {primaryCategory === 'Facial' && (
+        <div className="flex flex-wrap gap-3">
+          {facialCategories.map((c) => (
+            <button
+              key={c}
+              onClick={() => setFacialCategory(c)}
+              className={`px-4 py-2 rounded-full text-sm border transition ${
+                facialCategory === c ? 'bg-deep text-white border-deep' : 'bg-white border-blush text-deep'
+              }`}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="grid md:grid-cols-2 gap-6">
         {filtered.map((service) => (
