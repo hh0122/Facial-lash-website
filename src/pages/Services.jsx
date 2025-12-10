@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ServiceCard from '../components/ServiceCard';
 import { facialServices, lashServices } from '../data/services';
 
-const categories = ['All', 'Facial', 'Lash'];
+const categories = ['All', 'Pre-Treatment', 'Chemical Peel', 'Main Treatment', 'Lash'];
 
 export default function Services() {
   const [category, setCategory] = useState('All');
@@ -23,8 +23,9 @@ export default function Services() {
         <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Our menu</p>
         <h1 className="font-display text-4xl text-deep">Facial & Lash Services</h1>
         <p className="text-deep/70 max-w-3xl">
-          Select a category to explore detailed offerings. Each experience is customized to your skin, lash pattern, and
-          lifestyle.
+          Select a category to explore detailed offerings. Facials are organized into Pre-Treatment, Chemical Peel, and
+          Main Treatment options so you can quickly find the right experience, all customized to your skin, lash pattern,
+          and lifestyle.
         </p>
       </header>
 
