@@ -26,12 +26,12 @@ export default function About() {
         <div className="bg-white rounded-[28px] p-6 card-shadow space-y-4">
           <h2 className="font-display text-2xl text-deep">Meet the esthetician</h2>
           <p className="text-deep/70 leading-relaxed">
-            Founder & Lead Esthetician Aria Liu specializes in skin barrier repair, sculpting massage, and lash artistry. With
+            Founder & Lead Esthetician Lindsie Bui specializes in skin barrier repair, sculpting massage, and lash artistry. With
             a background in dermatology clinics and luxury spas, she blends medical insight with spa-level comfort.
           </p>
           <div className="p-4 rounded-2xl bg-blush/60 text-sm text-deep/80">
             “I want every guest to feel seen and supported. The best results come from listening, educating, and creating a plan
-            that fits your lifestyle.” — Aria Liu
+            that fits your lifestyle.” — Lindsie Bui
           </div>
         </div>
       </section>
