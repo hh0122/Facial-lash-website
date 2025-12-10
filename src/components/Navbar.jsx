@@ -28,10 +28,10 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-full bg-gradient-to-br from-gold to-blush flex items-center justify-center text-white font-semibold shadow-glow">
-            GA
+            G.A
           </div>
           <div>
-            <p className="font-display text-xl text-deep">Glow Ateria</p>
+            <p className="font-display text-xl text-deep">Glow Aterier</p>
             <p className="text-xs text-deep/70 tracking-wide">Facials & Lashes</p>
           </div>
         </Link>
