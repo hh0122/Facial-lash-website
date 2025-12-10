@@ -1,0 +1,59 @@
+export const facialServices = [
+  {
+    name: 'Radiance Renewal Facial',
+    description: '60-minute glow facial with enzyme exfoliation, sculpting massage, and LED rejuvenation.',
+    price: '$165',
+    image: 'https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=400&q=80',
+    category: 'Facial',
+    features: ['LED therapy', 'Neck & décolleté', 'Custom mask'],
+  },
+  {
+    name: 'Sculpt & Lift Facial',
+    description: 'Lymphatic drainage, gua sha, and microcurrent toning for lifted, contoured results.',
+    price: '$195',
+    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80',
+    category: 'Facial',
+    features: ['Microcurrent', 'Gua sha', 'Cooling globe finish'],
+  },
+  {
+    name: 'Clear Complexion Ritual',
+    description: 'Targeted clarifying facial with gentle extractions and calming botanicals for balanced skin.',
+    price: '$145',
+    image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80',
+    category: 'Facial',
+    features: ['Extractions', 'Blue LED', 'Oil balance mask'],
+  },
+];
+
+export const lashServices = [
+  {
+    name: 'Luxe Lash Lift',
+    description: 'Keratin-infused lift and tint for a softly fanned, mascara-free look.',
+    price: '$110',
+    image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80',
+    category: 'Lash',
+    features: ['Keratin', 'Tint', 'Nourishing serum'],
+  },
+  {
+    name: 'Featherlight Classics',
+    description: 'Custom classic extensions with ultra-fine fibers for refined, natural elegance.',
+    price: '$175',
+    image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80',
+    category: 'Lash',
+    features: ['Custom mapping', 'Silk fibers', 'Aftercare kit'],
+  },
+  {
+    name: 'Cashmere Volume Set',
+    description: 'Weightless volume lashes with a plush, airy finish and seamless blend.',
+    price: '$210',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80',
+    category: 'Lash',
+    features: ['Volume fans', 'Lash bath', 'Protein sealant'],
+  },
+];
+
+export const featuredServices = [
+  facialServices[0],
+  lashServices[1],
+  facialServices[1],
+];
