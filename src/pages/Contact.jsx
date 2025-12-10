@@ -44,9 +44,9 @@ export default function Contact() {
         <div className="space-y-4">
           <div className="bg-white rounded-[28px] p-6 card-shadow space-y-3">
             <h2 className="font-display text-2xl text-deep">Studio</h2>
-            <p className="text-deep/70">123 Glow Lane, Suite 210, Los Angeles, CA 90001</p>
-            <p className="text-deep/70">(213) 555-0199</p>
-            <p className="text-deep/70">hello@glowateria.com</p>
+            <p className="text-deep/70">3540 W University Dr STE 200, McKinney, TX 75071</p>
+            <p className="text-deep/70">(469) 989-5036</p>
+            <p className="text-deep/70">glow.ateria25@gmail.com</p>
             <div className="flex gap-3 text-sm text-deep/70 pt-2">
               <a href="#" className="hover:text-gold">Instagram</a>
               <a href="#" className="hover:text-gold">TikTok</a>
