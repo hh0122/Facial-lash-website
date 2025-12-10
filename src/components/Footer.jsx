@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t border-blush/60 bg-blush/40 mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 md:grid-cols-3">
         <div>
-          <h3 className="font-display text-lg mb-2 text-deep">Glow Ateria</h3>
+          <h3 className="font-display text-lg mb-2 text-deep">Glow Aterier</h3>
           <p className="text-sm text-deep/70 leading-relaxed">
             Luxury facials and lash artistry in a serene, modern studio. Discover a glow that lasts.
           </p>
@@ -18,10 +18,10 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="font-semibold text-deep mb-2">Visit</h4>
-          <p className="text-sm text-deep/70">123 Glow Lane, Suite 210</p>
-          <p className="text-sm text-deep/70">Los Angeles, CA 90001</p>
-          <p className="text-sm text-deep/70 mt-2">(213) 555-0199</p>
-          <p className="text-sm text-deep/70">hello@glowateria.com</p>
+          <p className="text-sm text-deep/70">3540 W University Dr STE 200</p>
+          <p className="text-sm text-deep/70">McKinney, TX 75071</p>
+          <p className="text-sm text-deep/70 mt-2">(469) 989-5036</p>
+          <p className="text-sm text-deep/70">glow.ateria25@gmail.com</p>
           <div className="flex gap-3 mt-3 text-deep/70 text-sm">
             <a href="#" className="hover:text-gold transition">Instagram</a>
             <a href="#" className="hover:text-gold transition">TikTok</a>
@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-xs text-deep/60 pb-6">
-        © {new Date().getFullYear()} Glow Ateria. All rights reserved.
+        © {new Date().getFullYear()} Glow Aterier. All rights reserved.
       </div>
     </footer>
   );
