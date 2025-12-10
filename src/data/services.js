@@ -20,7 +20,7 @@ export const facialServices = [
     description: 'Targeted clarifying facial with gentle extractions and calming botanicals for balanced skin.',
     price: '$80',
     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80',
-    category: 'Main Treatment',
+    category: 'Pre-Treatment',
     features: ['Extractions', 'Blue LED', 'Oil balance mask'],
   },
    {
@@ -28,7 +28,7 @@ export const facialServices = [
     description: 'Targeted clarifying facial with gentle extractions and calming botanicals for balanced skin.',
     price: '$100',
     image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80',
-    category: 'Main Treatment',
+    category: 'Pre-Treatment',
     features: ['Extractions', 'Blue LED', 'Oil balance mask'],
   },
    {
