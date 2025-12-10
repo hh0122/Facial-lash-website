@@ -14,6 +14,7 @@ const primaryCategories = [
     copy: 'Custom lifts, tints, and extensions tailored to the way you frame your eyes.',
   },
 ];
+const primaryCategories = ['Facial', 'Lash'];
 const facialCategories = ['All', 'Pre-Treatment', 'Chemical Peel', 'Main Treatment'];
 
 export default function Services() {
@@ -105,6 +106,38 @@ export default function Services() {
               </button>
             ))}
           </div>
+          Browse our services by the two main experiences we offer: facial treatments and lash artistry. Within facials,
+          explore Pre-Treatment, Chemical Peel, and Main Treatment options to find the perfect ritual for your skin goals.
+        </p>
+      </header>
+
+      <div className="flex flex-wrap gap-3">
+        {primaryCategories.map((c) => (
+          <button
+            key={c}
+            onClick={() => setPrimaryCategory(c)}
+            className={`px-4 py-2 rounded-full text-sm border transition ${
+              primaryCategory === c ? 'bg-gold text-white border-gold' : 'bg-white border-blush text-deep'
+            }`}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
+      {primaryCategory === 'Facial' && (
+        <div className="flex flex-wrap gap-3">
+          {facialCategories.map((c) => (
+            <button
+              key={c}
+              onClick={() => setFacialCategory(c)}
+              className={`px-4 py-2 rounded-full text-sm border transition ${
+                facialCategory === c ? 'bg-deep text-white border-deep' : 'bg-white border-blush text-deep'
+              }`}
+            >
+              {c}
+            </button>
+          ))}
         </div>
       )}
 
