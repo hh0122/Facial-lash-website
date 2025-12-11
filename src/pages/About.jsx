@@ -3,7 +3,7 @@ export default function About() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
       <header className="mt-10 space-y-3">
         <p className="text-sm uppercase tracking-[0.3em] text-deep/60">About</p>
-        <h1 className="font-display text-4xl text-deep">Glow Ateria</h1>
+        <h1 className="font-display text-4xl text-deep">Glow Atelier</h1>
         <p className="text-deep/70 max-w-3xl">
           A modern facial and lash studio founded on comfort, artistry, and science-backed skincare. We create rituals that
           celebrate your natural features with gentle, meticulous care.

@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="border-t border-blush/60 bg-blush/40 mt-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 md:grid-cols-3">
         <div>
-          <h3 className="font-display text-lg mb-2 text-deep">Glow Aterier</h3>
+          <h3 className="font-display text-lg mb-2 text-deep">Glow Atelier</h3>
           <p className="text-sm text-deep/70 leading-relaxed">
             Luxury facials and lash artistry in a serene, modern studio. Discover a glow that lasts.
           </p>
@@ -21,16 +21,16 @@ export default function Footer() {
           <p className="text-sm text-deep/70">3540 W University Dr STE 200</p>
           <p className="text-sm text-deep/70">McKinney, TX 75071</p>
           <p className="text-sm text-deep/70 mt-2">(469) 989-5036</p>
-          <p className="text-sm text-deep/70">glow.ateria25@gmail.com</p>
+          <p className="text-sm text-deep/70">glow.atelia25@gmail.com</p>
           <div className="flex gap-3 mt-3 text-deep/70 text-sm">
             <a href="#" className="hover:text-gold transition">Instagram</a>
             <a href="#" className="hover:text-gold transition">TikTok</a>
-            <a href="#" className="hover:text-gold transition">Pinterest</a>
+            <a href="#" className="hover:text-gold transition">Facebook</a>
           </div>
         </div>
       </div>
       <div className="text-center text-xs text-deep/60 pb-6">
-        © {new Date().getFullYear()} Glow Aterier. All rights reserved.
+        © {new Date().getFullYear()} Glow Atelier. All rights reserved.
       </div>
     </footer>
   );
