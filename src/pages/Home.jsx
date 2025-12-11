@@ -11,7 +11,7 @@ export default function Home() {
         <div className="space-y-6">
           <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Luxury skin & lash studio</p>
           <h1 className="font-display text-4xl md:text-5xl text-deep leading-tight">
-            Glow Ateria elevates your glow with curated facials and bespoke lash artistry.
+            Glow Atelier elevates your glow with curated facials and bespoke lash artistry.
           </h1>
           <p className="text-deep/70 leading-relaxed">
             Step into a sanctuary of soft light, calm music, and expert estheticians focused on your goals.

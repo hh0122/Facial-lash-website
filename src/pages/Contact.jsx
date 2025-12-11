@@ -46,11 +46,11 @@ export default function Contact() {
             <h2 className="font-display text-2xl text-deep">Studio</h2>
             <p className="text-deep/70">3540 W University Dr STE 200, McKinney, TX 75071</p>
             <p className="text-deep/70">(469) 989-5036</p>
-            <p className="text-deep/70">glow.ateria25@gmail.com</p>
+            <p className="text-deep/70">glow.atelia25@gmail.com</p>
             <div className="flex gap-3 text-sm text-deep/70 pt-2">
               <a href="#" className="hover:text-gold">Instagram</a>
               <a href="#" className="hover:text-gold">TikTok</a>
-              <a href="#" className="hover:text-gold">Pinterest</a>
+              <a href="#" className="hover:text-gold">Facebook</a>
             </div>
           </div>
           <div className="bg-white rounded-[28px] p-6 card-shadow space-y-2">
