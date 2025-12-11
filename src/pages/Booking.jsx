@@ -12,15 +12,52 @@ export default function Booking() {
     service: '',
     notes: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Booking submitted! Connect this form to your booking API.');
+    setError('');
+    setSuccessMessage('');
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mldgjpze', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...form,
+          _subject: 'New booking request from Glow Ateria',
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('We were unable to send your booking. Please try again.');
+      }
+
+      setSuccessMessage('Thank you! Your request has been sent. We will confirm shortly.');
+      setForm({
+        name: '',
+        email: '',
+        phone: '',
+        date: '',
+        time: '',
+        service: '',
+        notes: '',
+      });
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -129,12 +166,17 @@ export default function Booking() {
           </label>
           <div className="md:col-span-2 flex items-center justify-between">
             <p className="text-xs text-deep/60">No payment is processed here. We confirm appointments via email/text.</p>
-            <button
-              type="submit"
-              className="px-6 py-3 rounded-full bg-deep text-white font-semibold hover:bg-gold transition"
-            >
-              Request Appointment
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="px-6 py-3 rounded-full bg-deep text-white font-semibold hover:bg-gold transition disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Sending...' : 'Request Appointment'}
+              </button>
+              {successMessage && <p className="text-sm text-emerald-700">{successMessage}</p>}
+              {error && <p className="text-sm text-red-600">{error}</p>}
+            </div>
           </div>
         </form>
       </div>
