@@ -28,24 +28,19 @@ export default function Booking() {
     setIsSubmitting(true);
 
     try {
-      const formData = new FormData();
-      Object.entries(form).forEach(([key, value]) => {
-        formData.append(key, value);
-      });
-      formData.append('_subject', 'New booking request from Glow Ateria');
-
       const response = await fetch('https://formspree.io/f/mldgjpze', {
         method: 'POST',
         headers: {
-          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
-        body: formData,
+        body: JSON.stringify({
+          ...form,
+          _subject: 'New booking request from Glow Ateria',
+        }),
       });
 
       if (!response.ok) {
-        const data = await response.json().catch(() => null);
-        const message = data?.errors?.[0]?.message;
-        throw new Error(message || 'We were unable to send your booking. Please try again.');
+        throw new Error('We were unable to send your booking. Please try again.');
       }
 
       setSuccessMessage('Thank you! Your request has been sent. We will confirm shortly.');
