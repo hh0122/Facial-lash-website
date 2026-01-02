@@ -55,8 +55,14 @@ export default function Contact() {
           </div>
           <div className="bg-white rounded-[28px] p-6 card-shadow space-y-2">
             <h3 className="font-semibold text-deep">Map</h3>
-            <div className="h-56 rounded-2xl bg-gradient-to-br from-blush to-gold/60 flex items-center justify-center text-deep/90">
-              Embedded Google Map placeholder
+            <div className="h-56 rounded-2xl overflow-hidden border border-blush/60">
+              <iframe
+                title="Glow Atelia Studio location on Google Maps"
+                src="https://www.google.com/maps?q=3540%20W%20University%20Dr%20STE%20200%2C%20McKinney%2C%20TX%2075071&output=embed"
+                className="h-full w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </div>
