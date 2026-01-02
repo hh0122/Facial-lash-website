@@ -9,11 +9,11 @@ export default function Home() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-16">
       <section className="grid md:grid-cols-2 gap-10 items-center mt-10">
         <div className="space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Luxury skin & lash studio</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Luxury skin & lash studio</p>
           <h1 className="font-display text-4xl md:text-5xl text-deep leading-tight">
             Glow Atelier elevates your glow with curated facials and bespoke lash artistry.
           </h1>
-          <p className="text-deep/70 leading-relaxed">
+          <p className="text-deep/90 leading-relaxed">
             Step into a sanctuary of soft light, calm music, and expert estheticians focused on your goals.
             Every ritual is crafted to enhance your natural radiance with precision, safety, and relaxation.
           </p>
@@ -31,7 +31,7 @@ export default function Home() {
               View Services
             </Link>
           </div>
-          <div className="flex items-center gap-3 text-sm text-deep/70">
+          <div className="flex items-center gap-3 text-sm text-deep/90">
             <div className="h-2 w-2 rounded-full bg-gold" />
             <span>Medical-grade skincare • Gentle lash techniques • Cozy, serene studio</span>
           </div>
@@ -55,10 +55,10 @@ export default function Home() {
       <section className="space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Signature picks</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Signature picks</p>
             <h2 className="font-display text-3xl text-deep">Featured Services</h2>
           </div>
-          <Link to="/services" className="text-deep/70 hover:text-gold text-sm font-semibold">
+          <Link to="/services" className="text-deep/90 hover:text-gold text-sm font-semibold">
             Explore all services →
           </Link>
         </div>
@@ -71,9 +71,9 @@ export default function Home() {
 
       <section className="grid md:grid-cols-2 gap-10 items-center">
         <div className="space-y-4">
-          <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Experience</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Experience</p>
           <h2 className="font-display text-3xl text-deep">Every touchpoint is intentional</h2>
-          <p className="text-deep/70 leading-relaxed">
+          <p className="text-deep/90 leading-relaxed">
             From curated playlists to warm towels and gentle aromatics, Glow Ateria is designed for deep exhale.
             We combine science-backed methods with artful application so you leave renewed and photo-ready.
           </p>

@@ -23,7 +23,7 @@ export default function TestimonialSlider({ testimonials }) {
           <p className="text-deep/80 leading-relaxed text-sm md:text-base">{current.quote}</p>
           <div className="mt-4">
             <p className="font-semibold text-deep">{current.name}</p>
-            <p className="text-xs text-deep/60">{current.service}</p>
+            <p className="text-xs text-deep/80">{current.service}</p>
           </div>
         </div>
       </div>
