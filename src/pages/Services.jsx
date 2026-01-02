@@ -20,9 +20,9 @@ export default function Services() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
       <header className="space-y-3 mt-10">
-        <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Our menu</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Our menu</p>
         <h1 className="font-display text-4xl text-deep">Facial & Lash Services</h1>
-        <p className="text-deep/70 max-w-3xl">
+        <p className="text-deep/90 max-w-3xl">
           Select a category to explore detailed offerings. Facials are organized into Pre-Treatment, Chemical Peel, and
           Main Treatment options so you can quickly find the right experience, all customized to your skin, lash pattern,
           and lifestyle.

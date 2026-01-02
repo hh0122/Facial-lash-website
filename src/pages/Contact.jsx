@@ -2,9 +2,9 @@ export default function Contact() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
       <header className="mt-10 space-y-3">
-        <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Contact</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Contact</p>
         <h1 className="font-display text-4xl text-deep">Get in touch</h1>
-        <p className="text-deep/70 max-w-3xl">
+        <p className="text-deep/90 max-w-3xl">
           Questions about a treatment, lash aftercare, or memberships? Send a note and we will respond within one business day.
         </p>
       </header>
@@ -44,10 +44,10 @@ export default function Contact() {
         <div className="space-y-4">
           <div className="bg-white rounded-[28px] p-6 card-shadow space-y-3">
             <h2 className="font-display text-2xl text-deep">Studio</h2>
-            <p className="text-deep/70">3540 W University Dr STE 200, McKinney, TX 75071</p>
-            <p className="text-deep/70">(469) 989-5036</p>
-            <p className="text-deep/70">glow.atelia25@gmail.com</p>
-            <div className="flex gap-3 text-sm text-deep/70 pt-2">
+            <p className="text-deep/90">3540 W University Dr STE 200, McKinney, TX 75071</p>
+            <p className="text-deep/90">(469) 989-5036</p>
+            <p className="text-deep/90">glow.atelia25@gmail.com</p>
+            <div className="flex gap-3 text-sm text-deep/90 pt-2">
               <a href="#" className="hover:text-gold">Instagram</a>
               <a href="#" className="hover:text-gold">TikTok</a>
               <a href="#" className="hover:text-gold">Facebook</a>
@@ -55,7 +55,7 @@ export default function Contact() {
           </div>
           <div className="bg-white rounded-[28px] p-6 card-shadow space-y-2">
             <h3 className="font-semibold text-deep">Map</h3>
-            <div className="h-56 rounded-2xl bg-gradient-to-br from-blush to-gold/60 flex items-center justify-center text-deep/70">
+            <div className="h-56 rounded-2xl bg-gradient-to-br from-blush to-gold/60 flex items-center justify-center text-deep/90">
               Embedded Google Map placeholder
             </div>
           </div>

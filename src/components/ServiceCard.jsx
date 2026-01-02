@@ -14,7 +14,7 @@ export default function ServiceCard({ service, onBook }) {
             <h3 className="font-semibold text-lg text-deep">{service.name}</h3>
             <span className="text-gold font-semibold">{service.price}</span>
           </div>
-          <p className="text-sm text-deep/70 mt-2 leading-relaxed">{service.description}</p>
+          <p className="text-sm text-deep/90 mt-2 leading-relaxed">{service.description}</p>
           <div className="flex flex-wrap gap-2 mt-3">
             {service.features?.map((item) => (
               <span key={item} className="px-3 py-1 text-xs rounded-full bg-blush/70 text-deep/80">

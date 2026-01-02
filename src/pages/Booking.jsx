@@ -65,9 +65,9 @@ export default function Booking() {
       <div className="bg-white rounded-[32px] p-8 mt-10 card-shadow">
         <div className="flex flex-wrap items-start justify-between gap-6 mb-6">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Book</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Book</p>
             <h1 className="font-display text-3xl text-deep">Reserve your Glow Ateria ritual</h1>
-            <p className="text-deep/70 max-w-2xl mt-2">
+            <p className="text-deep/90 max-w-2xl mt-2">
               Choose your date, time, and preferred service. We will confirm promptly and prepare the studio for your arrival.
             </p>
           </div>
@@ -165,7 +165,7 @@ export default function Booking() {
             />
           </label>
           <div className="md:col-span-2 flex items-center justify-between">
-            <p className="text-xs text-deep/60">No payment is processed here. We confirm appointments via email/text.</p>
+            <p className="text-xs text-deep/80">No payment is processed here. We confirm appointments via email/text.</p>
             <div className="flex items-center gap-4">
               <button
                 type="submit"

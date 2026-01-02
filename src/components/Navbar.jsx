@@ -32,7 +32,7 @@ export default function Navbar() {
           </div>
           <div>
             <p className="font-display text-xl text-deep">Glow Atelier</p>
-            <p className="text-xs text-deep/70 tracking-wide">Facials & Lashes</p>
+            <p className="text-xs text-deep/90 tracking-wide">Facials & Lashes</p>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">

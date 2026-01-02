@@ -6,9 +6,9 @@ export default function Reviews() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-12">
       <header className="mt-10 space-y-3">
-        <p className="text-sm uppercase tracking-[0.3em] text-deep/60">Proof</p>
+        <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Proof</p>
         <h1 className="font-display text-4xl text-deep">Reviews & Gallery</h1>
-        <p className="text-deep/70 max-w-3xl">
+        <p className="text-deep/90 max-w-3xl">
           Hear from Glow Ateria guests and explore before & after transformations across our lash and facial rituals.
         </p>
       </header>
@@ -20,7 +20,7 @@ export default function Reviews() {
       <section className="space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="font-display text-3xl text-deep">Before & After Gallery</h2>
-          <p className="text-sm text-deep/60">Lashes • Facials • Glow-ups</p>
+          <p className="text-sm text-deep/80">Lashes • Facials • Glow-ups</p>
         </div>
         <GalleryGrid items={galleryItems} />
       </section>
