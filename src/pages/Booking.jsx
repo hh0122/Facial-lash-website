@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { addTreatment, getCustomerSummary, suggestNextService } from '../data/customerDb';
 
 const timeSlots = ['9:00 AM', '10:30 AM', '12:00 PM', '1:30 PM', '3:00 PM', '4:30 PM'];
 
@@ -15,6 +16,20 @@ export default function Booking() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
+  const [customerSummary, setCustomerSummary] = useState(null);
+  const [suggestedService, setSuggestedService] = useState('');
+
+  useEffect(() => {
+    if (!form.email) {
+      setCustomerSummary(null);
+      setSuggestedService('');
+      return;
+    }
+
+    const summary = getCustomerSummary(form.email);
+    setCustomerSummary(summary);
+    setSuggestedService(suggestNextService(summary?.treatments || []));
+  }, [form.email]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,6 +59,10 @@ export default function Booking() {
       }
 
       setSuccessMessage('Thank you! Your request has been sent. We will confirm shortly.');
+      addTreatment(form);
+      const summary = getCustomerSummary(form.email);
+      setCustomerSummary(summary);
+      setSuggestedService(suggestNextService(summary?.treatments || []));
       setForm({
         name: '',
         email: '',
@@ -179,6 +198,59 @@ export default function Booking() {
             </div>
           </div>
         </form>
+        <div className="mt-10 rounded-[28px] border border-blush bg-blush/30 p-6">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <p className="text-sm uppercase tracking-[0.3em] text-deep/80">Client history</p>
+              <h2 className="font-display text-2xl text-deep">Track your treatments</h2>
+              <p className="text-deep/80 mt-2 max-w-2xl">
+                Enter your email above to view past visits, your unique client ID, and a recommended next service.
+              </p>
+            </div>
+            {customerSummary && (
+              <div className="rounded-2xl bg-white/80 px-4 py-3 text-sm text-deep/80">
+                <p className="font-semibold text-deep">Client ID</p>
+                <p className="font-mono text-deep/90">{customerSummary.id}</p>
+              </div>
+            )}
+          </div>
+          <div className="mt-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-2xl bg-white/80 p-4">
+              <p className="text-sm font-semibold text-deep">Treatment history</p>
+              {customerSummary?.treatments?.length ? (
+                <ul className="mt-3 space-y-3 text-sm text-deep/80">
+                  {customerSummary.treatments.slice(0, 4).map((treatment) => (
+                    <li key={treatment.id} className="rounded-xl border border-blush/60 bg-white px-3 py-2">
+                      <p className="font-semibold text-deep">{treatment.service}</p>
+                      <p>
+                        {treatment.date} · {treatment.time}
+                      </p>
+                      {treatment.notes && <p className="text-deep/70">Notes: {treatment.notes}</p>}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-3 text-sm text-deep/70">
+                  No past treatments yet. Your visits will appear here once you book your first appointment.
+                </p>
+              )}
+            </div>
+            <div className="rounded-2xl bg-white/80 p-4">
+              <p className="text-sm font-semibold text-deep">Suggested next step</p>
+              <p className="mt-3 text-sm text-deep/80">
+                {suggestedService ||
+                  'Share your email above to unlock a personalized recommendation based on your past services.'}
+              </p>
+              {customerSummary && (
+                <div className="mt-4 rounded-xl bg-blush/60 px-3 py-2 text-sm text-deep/80">
+                  <p className="font-semibold text-deep">Preferred contact</p>
+                  <p>{customerSummary.email}</p>
+                  {customerSummary.phone && <p>{customerSummary.phone}</p>}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
