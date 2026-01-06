@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import { facialServices, lashServices } from '../data/services';
 
@@ -6,15 +7,13 @@ const categories = ['All', 'Pre-Treatment', 'Chemical Peel', 'Main Treatment', '
 
 export default function Services() {
   const [category, setCategory] = useState('All');
+  const navigate = useNavigate();
   const services = [...facialServices, ...lashServices];
   const filtered = category === 'All' ? services : services.filter((s) => s.category === category);
 
   const handleBook = (service) => {
-    const bookingForm = document.getElementById('booking-intent');
-    if (bookingForm) {
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-      bookingForm.querySelector('input[name="service"]').value = service.name;
-    }
+    const params = new URLSearchParams({ service: service.name });
+    navigate(`/booking?${params.toString()}`);
   };
 
   return (
