@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { addTreatment, getCustomerSummary, suggestNextService } from '../data/customerDb';
 
 const timeSlots = ['9:00 AM', '10:30 AM', '12:00 PM', '1:30 PM', '3:00 PM', '4:30 PM'];
 
 export default function Booking() {
+  const { search } = useLocation();
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -18,6 +20,14 @@ export default function Booking() {
   const [successMessage, setSuccessMessage] = useState('');
   const [customerSummary, setCustomerSummary] = useState(null);
   const [suggestedService, setSuggestedService] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(search);
+    const selectedService = params.get('service');
+    if (selectedService) {
+      setForm((prev) => ({ ...prev, service: selectedService }));
+    }
+  }, [search]);
 
   useEffect(() => {
     if (!form.email) {
