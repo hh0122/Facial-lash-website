@@ -1,10 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { featuredServices } from '../data/services';
 import { testimonials } from '../data/reviews';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialSlider from '../components/TestimonialSlider';
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const handleBook = (service) => {
+    const params = new URLSearchParams({ service: service.name });
+    navigate(`/booking?${params.toString()}`);
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 pb-16">
       <section className="grid md:grid-cols-2 gap-10 items-center mt-10">
@@ -64,7 +71,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {featuredServices.map((service) => (
-            <ServiceCard key={service.name} service={service} onBook={() => {}} />
+            <ServiceCard key={service.name} service={service} onBook={handleBook} />
           ))}
         </div>
       </section>
