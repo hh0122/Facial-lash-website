@@ -27,8 +27,47 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-gold to-blush flex items-center justify-center text-white font-semibold shadow-glow">
-            GA
+          <div className="h-10 w-10">
+            <svg
+              className="h-full w-full"
+              viewBox="0 0 100 100"
+              role="img"
+              aria-label="Glow Atelier logo"
+            >
+              <circle cx="50" cy="50" r="48" fill="#f4e5dd" />
+              <circle cx="50" cy="50" r="41" fill="none" stroke="#8a776f" strokeWidth="2" />
+              <text
+                x="50"
+                y="58"
+                textAnchor="middle"
+                fontFamily="serif"
+                fontSize="36"
+                fill="#8a776f"
+              >
+                GA
+              </text>
+              <text
+                x="50"
+                y="76"
+                textAnchor="middle"
+                fontFamily="serif"
+                fontSize="12"
+                fill="#8a776f"
+              >
+                25
+              </text>
+              <defs>
+                <path
+                  id="logo-text-path"
+                  d="M 50 10 A 40 40 0 0 1 90 50"
+                />
+              </defs>
+              <text fill="#8a776f" fontSize="8" fontFamily="serif" letterSpacing="2">
+                <textPath href="#logo-text-path" startOffset="0%">
+                  SOLO ESTHETICIAN
+                </textPath>
+              </text>
+            </svg>
           </div>
           <div>
             <p className="font-display text-xl text-deep">Glow Atelier</p>
