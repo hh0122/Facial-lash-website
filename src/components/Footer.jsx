@@ -18,8 +18,8 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="font-semibold text-deep mb-2">Visit</h4>
-          <p className="text-sm text-deep/90">3540 W University Dr STE 200</p>
-          <p className="text-sm text-deep/90">McKinney, TX 75071</p>
+          <p className="text-sm text-deep/90">737 Hollow Ridges </p>
+          <p className="text-sm text-deep/90">Allen, TX 75002</p>
           <p className="text-sm text-deep/90 mt-2">(469) 989-5036</p>
           <p className="text-sm text-deep/90">glow.atelia25@gmail.com</p>
           <div className="flex gap-3 mt-3 text-deep/90 text-sm">
